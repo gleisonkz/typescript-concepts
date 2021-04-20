@@ -1,4 +1,4 @@
-namespace TS.TypeUtilities.Pick {
+namespace TS.TypeUtilities {
   /* 
     E aí você o Type Utility Pick do TypeScript?
     disponível a partir da versão 2.1 do TS esse é um type

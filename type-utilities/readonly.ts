@@ -1,4 +1,4 @@
-namespace TS.TypeUtilities.Readonly {
+namespace TS.TypeUtilities {
   {
     /* 
     E aí você os Type Utilities Partial e Readonly do TypeScript?

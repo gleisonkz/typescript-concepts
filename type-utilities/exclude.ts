@@ -1,4 +1,4 @@
-namespace TS.TypeUtilities.Exclude {
+namespace TS.TypeUtilities {
   /* 
     Type Utility Exclude?
     disponível a partir da versão 2.1 do TypeScript esse é um type

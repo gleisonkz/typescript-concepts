@@ -1,4 +1,4 @@
-namespace TS.TypeUtilities.Pick {
+namespace TS.TypeUtilities {
   {
     /* 
     E aí você o Type Utility Record do TypeScript?

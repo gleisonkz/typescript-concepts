@@ -1,4 +1,4 @@
-namespace TS.TypeUtilities.Partial {
+namespace TS.TypeUtilities {
   /* 
     E aí você os Type Utilities Partial e Readonly do TypeScript?
     disponíveis a partir da versão 2.1 do TS esse são dois types
