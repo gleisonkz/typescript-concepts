@@ -1,4 +1,4 @@
-{
+namespace TS.Operators {
   //retorna uma string ou um Union  das chaves de um determinado tipo.
 
   type Point = { x: number; y: number };
