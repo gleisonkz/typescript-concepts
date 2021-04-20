@@ -1,0 +1,6 @@
+{
+  "cSpell.words": ["Unpromisify", "tipar"],
+  "[typescript]": {
+    "editor.showUnused": false
+  }
+}
