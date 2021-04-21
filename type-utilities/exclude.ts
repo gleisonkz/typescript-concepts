@@ -1,7 +1,7 @@
 namespace TS.TypeUtilities {
   /* 
     Type Utility Exclude?
-    disponível a partir da versão 2.1 do TypeScript esse é um type
+    disponível a partir da versão 2.8 do TypeScript esse é um type
     que por de baixo dos panos utilizam um Mapped Type para gerar um novo tipo
 
     Caso não saiba o que é um Mapped Type 
