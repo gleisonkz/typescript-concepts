@@ -75,7 +75,5 @@ Assignment: {
     let v3: object = x; // Error
     let v4: string = x; // Error
     let v5: string[] = x; // Error
-    let v6: {} = x; // Error
-    let v7: {} | null | undefined = x; // Error
   }
 }
