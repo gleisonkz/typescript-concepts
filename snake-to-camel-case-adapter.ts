@@ -36,23 +36,19 @@ function snakeToCamelCaseObject<T>(obj: T): SnakeToCamelCaseAdapter<T> {
   };
 
   for (const propertyName in obj) {
-    const value: Object = obj[propertyName];
+    const value: any = obj[propertyName];
+    const type = value?.constructor?.name;
 
-    if (value?.constructor?.name == "Array") {
-      for (const prop of value as []) {
-        snakeToCamelCaseObject(prop);
-      }
-    } else if (value?.constructor?.name == "Object") {
-      snakeToCamelCaseObject(value);
-    } else {
-      const newPropertyName = snakeToCamelCase(propertyName);
-      const originalValue = (obj as any)[propertyName];
-      delete (obj as any)[propertyName];
-      (obj as any)[newPropertyName] = originalValue;
-    }
+    type === "Array" && value.forEach((prop: unknown) => snakeToCamelCaseObject(prop));
+    type == "Object" && snakeToCamelCaseObject(value);
+
+    const newPropertyName = snakeToCamelCase(propertyName);
+    const originalValue = obj[propertyName];
+    delete obj[propertyName];
+    obj[newPropertyName] = originalValue;
   }
 
-  return (obj as unknown) as SnakeToCamelCaseAdapter<T>;
+  return obj as unknown as SnakeToCamelCaseAdapter<T>;
 }
 
 const objInSnakeCase: Person = {
@@ -69,5 +65,5 @@ const objInSnakeCase: Person = {
 };
 
 const objInCamelCase = snakeToCamelCaseObject(objInSnakeCase);
-console.log(objInCamelCase.contacts);
+console.log(objInCamelCase.principalAddress);
 console.log(objInCamelCase.contacts[0].id);
