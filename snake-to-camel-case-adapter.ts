@@ -59,21 +59,3 @@ export interface Contacts {
   id: number;
   phone_number: string;
 }
-
-const objInSnakeCase: Person = {
-  pessoa_id: 1,
-  is_bot: false,
-  first_name: "C3P0",
-  last_name: "Raw",
-  principal_address: {
-    id: "5",
-    is_state: "2",
-    principal_street: "1",
-  },
-  contacts: [{ id: 99, phone_number: "1236" }],
-};
-
-const objInCamelCase = snakeToCamelCaseObject(objInSnakeCase);
-
-console.log(objInCamelCase.contacts);
-console.log(objInCamelCase.contacts[0].id);
