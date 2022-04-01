@@ -50,3 +50,27 @@ diferente de um objeto como abaixo. */
 
   let person = merge({ name: "John" }, 25);
 }
+
+{
+  class Person {
+    constructor(public name: string, public age: number) {}
+  }
+
+  // usando para herdar de outra classe
+  class Runner extends Person {
+    run() {
+      return `${this.name} is running!`;
+    }
+  }
+
+  const runner = new Runner("Phelps", 33);
+  console.log(runner.run());
+
+  // usando como constraint de um generics
+  function logObject<T extends object>(obj: T) {
+    console.log(obj);
+  }
+
+  logObject(25);
+  // Erro pois 25 não é um objeto
+}
